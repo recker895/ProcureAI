@@ -140,7 +140,8 @@ def assess(agent, snapshot, evidence, allowed_sources, executor=None, extraction
                 elif name=='extract_document' and extraction:
                     if not isinstance(args.get('fields'),dict) or not isinstance(args.get('sources'),dict):d.fail('Invalid extraction schema',502)
                     visible_labels=re.findall(r'(?im)^(?:supplier|available quantity|unit price|currency|delivery date|invoice total)\s*:',evidence['intake']['source'])
-                    if not args['fields'] and len(visible_labels)>=3:
+                    meaningful_fields={k:v for k,v in args['fields'].items() if v is not None and v!='' and v!=[]}
+                    if not meaningful_fields and len(visible_labels)>=3:
                         document=None;value={'accepted':False,'reason':'The source contains labelled fields. Extract their literal values and exact single-line excerpts. TEST data must be extracted as TEST data, not treated as absent. Do not infer missing fields.'}
                     else:document=args;value={'stored_as_proposal':True,'executed':False}
                 elif name=='record_assessment':

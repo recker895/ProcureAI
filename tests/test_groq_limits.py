@@ -102,3 +102,13 @@ class CitationRecoveryTests(unittest.TestCase):
         with patch('groq_provider.config',return_value=('TEST','FIRST')),patch('groq_provider.completion',return_value=bad) as request:
             with self.assertRaises(d.RuleError):groq.assess(6,{'id':'TEST','quotes':[]},{'documents':[]},{'TEST'},lambda:{})
         self.assertEqual(request.call_count,5)
+
+class NullExtractionTests(unittest.TestCase):
+    def test_all_null_fields_are_not_successful_extraction(self):
+        def extraction(fields):return Response(body={'choices':[{'message':{'role':'assistant','tool_calls':[{'id':'EXTRACT','function':{'name':'extract_document','arguments':json.dumps({'fields':fields,'sources':{},'missing':[]})}}]}}]})
+        intake={'document_id':'DOC','kind':'quotation','source':'Supplier: TEST\nAvailable quantity: 300\nUnit price: 26.00\nCurrency: USD'}
+        with patch('groq_provider.config',return_value=('TEST','FIRST')),patch('groq_provider.completion',side_effect=[extraction({'supplier':None,'quantity':None}),extraction({'supplier':'TEST'}),assessment_response()]) as request:
+            result=groq.assess(3,{'id':'TEST','quotes':[]},{'documents':[],'intake':intake},{'TEST'},lambda:intake,True)
+        self.assertFalse(result['tools'][1]['result']['accepted'])
+        self.assertEqual(result['document']['fields'],{'supplier':'TEST'})
+        self.assertEqual(request.call_count,3)
