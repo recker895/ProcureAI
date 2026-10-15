@@ -1,0 +1,14 @@
+
+Running 7 tests using 1 worker
+
+(node:18096) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ok 1 tests\browser.spec.cjs:5:1 › Desktop manual dashboard retains controls and renders true black dark theme (841ms)
+  ok 2 tests\browser.spec.cjs:6:1 › AI switch shows the command queues and survives reload (742ms)
+  ok 3 tests\browser.spec.cjs:7:1 › Case mode switch is versioned and stage workspace opens (908ms)
+  ok 4 tests\browser.spec.cjs:8:1 › Light theme, System theme and mobile layout remain usable (12.9s)
+  ok 5 tests\browser.spec.cjs:9:1 › Tablet view exposes all thirteen agent workspaces (646ms)
+  ok 6 tests\browser.spec.cjs:10:1 › Viewer sees no write actions and integrations report actual readiness (479ms)
+  ok 7 tests\browser.spec.cjs:12:1 › One buyer uses Process next for every POC human gate without logging out (2.0s)
+
+  7 passed (19.7s)

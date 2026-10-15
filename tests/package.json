@@ -1,0 +1,1 @@
+{"private":true,"type":"module","scripts":{"test":"node --test test_theme.mjs test_ui.mjs","test:browser":"playwright test -c playwright.config.cjs"},"devDependencies":{"jsdom":"30.1.2","@playwright/test":"1.64.0"}}

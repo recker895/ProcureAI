@@ -1,0 +1,252 @@
+{
+  "scope": "Disposable TEST database, real Groq API and real HiGHS; role fixtures exercise human gates. No actual human review or external procurement execution.",
+  "connection": {
+    "status": "Connected",
+    "model": "openai/gpt-oss-120b",
+    "checked": "2026-10-14T19:05:36.139419+00:00"
+  },
+  "checkpoints": [
+    "SUPPLIER_REVIEW",
+    "PO_REVIEW",
+    "FINANCE_REVIEW",
+    "PAYMENT_PENDING"
+  ],
+  "final_status": "COMPLETED",
+  "summary": {
+    "accepted": "300",
+    "pending": "0",
+    "invoiced": "300",
+    "invoice_total": "7650.00",
+    "paid": "7650.00",
+    "balance": "0.00"
+  },
+  "agents_exercised": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13
+  ],
+  "assessments": [
+    {
+      "agent": 1,
+      "model": "openai/gpt-oss-120b",
+      "input_tokens": 1807,
+      "output_tokens": 1074,
+      "elapsed_ms": 3031
+    },
+    {
+      "agent": 2,
+      "model": "openai/gpt-oss-120b",
+      "input_tokens": 1809,
+      "output_tokens": 730,
+      "elapsed_ms": 2422
+    },
+    {
+      "agent": 3,
+      "model": "openai/gpt-oss-120b",
+      "input_tokens": 4444,
+      "output_tokens": 1513,
+      "elapsed_ms": 33000
+    },
+    {
+      "agent": 4,
+      "model": "openai/gpt-oss-120b",
+      "input_tokens": 1839,
+      "output_tokens": 860,
+      "elapsed_ms": 21328
+    },
+    {
+      "agent": 5,
+      "model": "openai/gpt-oss-120b",
+      "input_tokens": 3081,
+      "output_tokens": 1031,
+      "elapsed_ms": 31530
+    },
+    {
+      "agent": 1,
+      "model": "openai/gpt-oss-120b",
+      "input_tokens": 1837,
+      "output_tokens": 658,
+      "elapsed_ms": 18608
+    },
+    {
+      "agent": 2,
+      "model": "openai/gpt-oss-120b",
+      "input_tokens": 1839,
+      "output_tokens": 909,
+      "elapsed_ms": 15936
+    },
+    {
+      "agent": 5,
+      "model": "openai/gpt-oss-120b",
+      "input_tokens": 3081,
+      "output_tokens": 871,
+      "elapsed_ms": 31827
+    },
+    {
+      "agent": 6,
+      "model": "openai/gpt-oss-120b",
+      "input_tokens": 2251,
+      "output_tokens": 865,
+      "elapsed_ms": 23235
+    },
+    {
+      "agent": 1,
+      "model": "openai/gpt-oss-120b",
+      "input_tokens": 1847,
+      "output_tokens": 706,
+      "elapsed_ms": 21860
+    },
+    {
+      "agent": 1,
+      "model": "openai/gpt-oss-120b",
+      "input_tokens": 1847,
+      "output_tokens": 748,
+      "elapsed_ms": 14265
+    },
+    {
+      "agent": 7,
+      "model": "openai/gpt-oss-120b",
+      "input_tokens": 1971,
+      "output_tokens": 1076,
+      "elapsed_ms": 22046
+    },
+    {
+      "agent": 1,
+      "model": "openai/gpt-oss-120b",
+      "input_tokens": 1861,
+      "output_tokens": 740,
+      "elapsed_ms": 21391
+    },
+    {
+      "agent": 1,
+      "model": "openai/gpt-oss-120b",
+      "input_tokens": 1861,
+      "output_tokens": 847,
+      "elapsed_ms": 20000
+    },
+    {
+      "agent": 8,
+      "model": "openai/gpt-oss-120b",
+      "input_tokens": 4099,
+      "output_tokens": 891,
+      "elapsed_ms": 37671
+    },
+    {
+      "agent": 1,
+      "model": "openai/gpt-oss-120b",
+      "input_tokens": 1877,
+      "output_tokens": 818,
+      "elapsed_ms": 17485
+    },
+    {
+      "agent": 9,
+      "model": "openai/gpt-oss-120b",
+      "input_tokens": 2116,
+      "output_tokens": 723,
+      "elapsed_ms": 18889
+    },
+    {
+      "agent": 10,
+      "model": "openai/gpt-oss-120b",
+      "input_tokens": 2106,
+      "output_tokens": 551,
+      "elapsed_ms": 23483
+    },
+    {
+      "agent": 1,
+      "model": "openai/gpt-oss-120b",
+      "input_tokens": 1882,
+      "output_tokens": 939,
+      "elapsed_ms": 16250
+    },
+    {
+      "agent": 1,
+      "model": "openai/gpt-oss-120b",
+      "input_tokens": 1926,
+      "output_tokens": 1152,
+      "elapsed_ms": 21421
+    },
+    {
+      "agent": 11,
+      "model": "openai/gpt-oss-120b",
+      "input_tokens": 2131,
+      "output_tokens": 734,
+      "elapsed_ms": 21438
+    },
+    {
+      "agent": 1,
+      "model": "openai/gpt-oss-120b",
+      "input_tokens": 1916,
+      "output_tokens": 769,
+      "elapsed_ms": 19813
+    },
+    {
+      "agent": 12,
+      "model": "openai/gpt-oss-120b",
+      "input_tokens": 2406,
+      "output_tokens": 1037,
+      "elapsed_ms": 18235
+    },
+    {
+      "agent": 1,
+      "model": "openai/gpt-oss-120b",
+      "input_tokens": 1926,
+      "output_tokens": 715,
+      "elapsed_ms": 23266
+    },
+    {
+      "agent": 1,
+      "model": "openai/gpt-oss-120b",
+      "input_tokens": 1921,
+      "output_tokens": 671,
+      "elapsed_ms": 13921
+    },
+    {
+      "agent": 13,
+      "model": "openai/gpt-oss-120b",
+      "input_tokens": 2746,
+      "output_tokens": 754,
+      "elapsed_ms": 24641
+    },
+    {
+      "agent": 1,
+      "model": "openai/gpt-oss-120b",
+      "input_tokens": 2089,
+      "output_tokens": 774,
+      "elapsed_ms": 21046
+    },
+    {
+      "agent": 13,
+      "model": "openai/gpt-oss-120b",
+      "input_tokens": 2925,
+      "output_tokens": 625,
+      "elapsed_ms": 23811
+    }
+  ],
+  "expected_disconnected_exceptions": [
+    {
+      "agent": 4,
+      "error": "Automatic supplier communication is disabled. Review RFQ contacts and communication policy."
+    },
+    {
+      "agent": 8,
+      "error": "Test and unclassified legacy records cannot reach live external services"
+    },
+    {
+      "agent": 13,
+      "error": "Finance approved the invoice, but no approved payee reference is configured. Reconcile an external payment or obtain approved beneficiary details."
+    }
+  ],
+  "audit_integrity": true,
+  "external_jobs_created": 0
+}

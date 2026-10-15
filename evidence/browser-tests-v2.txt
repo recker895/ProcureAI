@@ -1,0 +1,13 @@
+
+Running 6 tests using 1 worker
+
+(node:4100) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ok 1 outputs\ProcureAI\tests\browser.spec.cjs:5:1 › Desktop manual dashboard retains controls and renders true black dark theme (867ms)
+  ok 2 outputs\ProcureAI\tests\browser.spec.cjs:6:1 › AI switch shows the command queues and survives reload (763ms)
+  ok 3 outputs\ProcureAI\tests\browser.spec.cjs:7:1 › Case mode switch is versioned and stage workspace opens (888ms)
+  ok 4 outputs\ProcureAI\tests\browser.spec.cjs:8:1 › Light theme, System theme and mobile layout remain usable (13.0s)
+  ok 5 outputs\ProcureAI\tests\browser.spec.cjs:9:1 › Tablet view exposes all thirteen agent workspaces (744ms)
+  ok 6 outputs\ProcureAI\tests\browser.spec.cjs:10:1 › Viewer sees no write actions and integrations report actual readiness (635ms)
+
+  6 passed (18.0s)

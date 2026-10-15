@@ -1,0 +1,11 @@
+CREATE TABLE IF NOT EXISTS case_controls(case_id TEXT PRIMARY KEY REFERENCES cases(id),mode TEXT NOT NULL DEFAULT 'manual' CHECK(mode IN ('manual','ai')),epoch INTEGER NOT NULL DEFAULT 0,record_kind TEXT NOT NULL DEFAULT 'operational' CHECK(record_kind IN ('operational','test','legacy')));
+CREATE TABLE IF NOT EXISTS preferences(user_id TEXT PRIMARY KEY REFERENCES users(id),default_mode TEXT NOT NULL DEFAULT 'manual');
+CREATE TABLE IF NOT EXISTS agent_tasks(id TEXT PRIMARY KEY,case_id TEXT NOT NULL REFERENCES cases(id),agent INTEGER NOT NULL,intent TEXT NOT NULL,epoch INTEGER NOT NULL,status TEXT NOT NULL,attempts INTEGER NOT NULL DEFAULT 0,available REAL NOT NULL,lease_until REAL,lease_owner TEXT,input TEXT NOT NULL,result TEXT,error TEXT,created TEXT NOT NULL,updated TEXT NOT NULL,UNIQUE(case_id,agent,intent,epoch));
+CREATE INDEX IF NOT EXISTS tasks_queue ON agent_tasks(status,available);
+CREATE TABLE IF NOT EXISTS agent_runs(id TEXT PRIMARY KEY,task_id TEXT NOT NULL,case_id TEXT NOT NULL,agent INTEGER NOT NULL,input TEXT NOT NULL,tools TEXT NOT NULL,explanation TEXT NOT NULL,model TEXT NOT NULL,prompt_version TEXT NOT NULL,input_tokens INTEGER NOT NULL,output_tokens INTEGER NOT NULL,elapsed_ms INTEGER NOT NULL,cost TEXT,created TEXT NOT NULL);
+CREATE TRIGGER IF NOT EXISTS runs_no_update BEFORE UPDATE ON agent_runs BEGIN SELECT RAISE(ABORT,'agent runs are immutable'); END;
+CREATE TRIGGER IF NOT EXISTS runs_no_delete BEFORE DELETE ON agent_runs BEGIN SELECT RAISE(ABORT,'agent runs are immutable'); END;
+CREATE TABLE IF NOT EXISTS document_intake(document_id TEXT PRIMARY KEY REFERENCES documents(id),kind TEXT NOT NULL,source TEXT NOT NULL,proposal TEXT,status TEXT NOT NULL DEFAULT 'QUEUED',error TEXT);
+CREATE TABLE IF NOT EXISTS integration_events(id TEXT PRIMARY KEY,kind TEXT NOT NULL,case_id TEXT NOT NULL,digest TEXT NOT NULL,result TEXT NOT NULL,created TEXT NOT NULL);
+CREATE TABLE IF NOT EXISTS service_health(kind TEXT PRIMARY KEY,status TEXT NOT NULL,checked TEXT NOT NULL,detail TEXT NOT NULL);
+INSERT OR IGNORE INTO case_controls(case_id,record_kind) SELECT id,CASE WHEN upper(json_extract(data,'$.title')) LIKE 'TEST%' THEN 'test' ELSE 'legacy' END FROM cases;

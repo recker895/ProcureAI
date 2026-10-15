@@ -1,0 +1,148 @@
+C:\Users\Recker\Documents\Codex\2026-10-13\user\work\procure-venv\Lib\site-packages\fastapi\testclient.py:1: StarletteDeprecationWarning: Using `httpx` with `starlette.testclient` is deprecated; install `httpx2` instead.
+  from starlette.testclient import TestClient as TestClient  # noqa
+test_agent_cannot_approve (test_automation.AutomationTests.test_agent_cannot_approve) ... ok
+test_api_mode_idempotency_default_does_not_change_existing (test_automation.AutomationTests.test_api_mode_idempotency_default_does_not_change_existing) ... INFO:procureai:POST /api/login 200 203ms
+INFO:httpx:HTTP Request: POST http://testserver/api/login "HTTP/1.1 200 OK"
+INFO:procureai:POST /api/cases/PR-75163e29fcf34261/actions/mode 200 16ms
+INFO:httpx:HTTP Request: POST http://testserver/api/cases/PR-75163e29fcf34261/actions/mode "HTTP/1.1 200 OK"
+INFO:procureai:POST /api/cases/PR-75163e29fcf34261/actions/mode 200 0ms
+INFO:httpx:HTTP Request: POST http://testserver/api/cases/PR-75163e29fcf34261/actions/mode "HTTP/1.1 200 OK"
+INFO:procureai:POST /api/preferences 200 16ms
+INFO:httpx:HTTP Request: POST http://testserver/api/preferences "HTTP/1.1 200 OK"
+ok
+test_assessment_is_immutable_and_source_snapshots_are_saved (test_automation.AutomationTests.test_assessment_is_immutable_and_source_snapshots_are_saved) ... ok
+test_changed_terms_invalidate_approvals (test_automation.AutomationTests.test_changed_terms_invalidate_approvals) ... ok
+test_complete_ai_cycle_with_mandatory_role_checkpoints (test_automation.AutomationTests.test_complete_ai_cycle_with_mandatory_role_checkpoints) ... ok
+test_extraction_requires_exact_supported_sources (test_automation.AutomationTests.test_extraction_requires_exact_supported_sources) ... ok
+test_gateway_acknowledgment_does_not_fabricate_payment (test_automation.AutomationTests.test_gateway_acknowledgment_does_not_fabricate_payment) ... ok
+test_gateway_settlement_matches_approved_invoice (test_automation.AutomationTests.test_gateway_settlement_matches_approved_invoice) ... ok
+test_human_role_and_separation_checks (test_automation.AutomationTests.test_human_role_and_separation_checks) ... ok
+test_image_requires_configured_ocr (test_automation.AutomationTests.test_image_requires_configured_ocr) ... ok
+test_invoice_exception_does_not_advance_to_finance (test_automation.AutomationTests.test_invoice_exception_does_not_advance_to_finance) ... ok
+test_missing_connection_is_visible_exception (test_automation.AutomationTests.test_missing_connection_is_visible_exception) ... ok
+test_mode_switch_fences_queued_work (test_automation.AutomationTests.test_mode_switch_fences_queued_work) ... ok
+test_multi_supplier_orders_and_receipt_boundaries (test_automation.AutomationTests.test_multi_supplier_orders_and_receipt_boundaries) ... INFO:procureai:POST /api/login 200 203ms
+INFO:httpx:HTTP Request: POST http://testserver/api/login "HTTP/1.1 200 OK"
+INFO:procureai:GET /api/dashboard 200 0ms
+INFO:httpx:HTTP Request: GET http://testserver/api/dashboard "HTTP/1.1 200 OK"
+INFO:procureai:GET /api/dashboard 200 15ms
+INFO:httpx:HTTP Request: GET http://testserver/api/dashboard?record_kind=test "HTTP/1.1 200 OK"
+ok
+test_no_duplicate_agent_submission (test_automation.AutomationTests.test_no_duplicate_agent_submission) ... ok
+test_override_resolves_constraints_and_requires_reason (test_automation.AutomationTests.test_override_resolves_constraints_and_requires_reason) ... ok
+test_partial_delivery_and_partial_invoice (test_automation.AutomationTests.test_partial_delivery_and_partial_invoice) ... ok
+test_pending_payment_blocks_duplicate_recording_and_unknown_requires_job (test_automation.AutomationTests.test_pending_payment_blocks_duplicate_recording_and_unknown_requires_job) ... INFO:procureai:POST /api/login 200 203ms
+INFO:httpx:HTTP Request: POST http://testserver/api/login "HTTP/1.1 200 OK"
+INFO:procureai:POST /api/cases/PR-3aea0f3b9a1541e4/actions/payment_record 409 15ms
+INFO:httpx:HTTP Request: POST http://testserver/api/cases/PR-3aea0f3b9a1541e4/actions/payment_record "HTTP/1.1 409 Conflict"
+INFO:procureai:POST /api/cases/PR-3aea0f3b9a1541e4/actions/payment_record 409 0ms
+INFO:httpx:HTTP Request: POST http://testserver/api/cases/PR-3aea0f3b9a1541e4/actions/payment_record "HTTP/1.1 409 Conflict"
+INFO:procureai:POST /api/cases/PR-3aea0f3b9a1541e4/actions/payment_record 200 16ms
+INFO:httpx:HTTP Request: POST http://testserver/api/cases/PR-3aea0f3b9a1541e4/actions/payment_record "HTTP/1.1 200 OK"
+ok
+test_recovery_of_expired_lease (test_automation.AutomationTests.test_recovery_of_expired_lease) ... ok
+test_signed_event_replay_and_cross_case_document (test_automation.AutomationTests.test_signed_event_replay_and_cross_case_document) ... ok
+test_signed_webhook_rejects_bad_signatures (test_automation.AutomationTests.test_signed_webhook_rejects_bad_signatures) ... INFO:procureai:POST /api/integration-events/warehouse 403 16ms
+INFO:httpx:HTTP Request: POST http://testserver/api/integration-events/warehouse "HTTP/1.1 403 Forbidden"
+ok
+test_test_record_cannot_queue_live_external_actions (test_automation.AutomationTests.test_test_record_cannot_queue_live_external_actions) ... ok
+test_budget_infeasible (test_automation.OptimizationTests.test_budget_infeasible) ... ok
+test_freight_tax_and_penalties (test_automation.OptimizationTests.test_freight_tax_and_penalties) ... ok
+test_moq_and_supplier_count (test_automation.OptimizationTests.test_moq_and_supplier_count) ... ok
+test_reproducible_snapshot (test_automation.OptimizationTests.test_reproducible_snapshot) ... ok
+test_share_and_qualifications (test_automation.OptimizationTests.test_share_and_qualifications) ... ok
+test_split_capacity_and_exact_cost (test_automation.OptimizationTests.test_split_capacity_and_exact_cost) ... ok
+test_agent_cannot_approve (test_automation.POCConsoleTests.test_agent_cannot_approve) ... ok
+test_api_mode_idempotency_default_does_not_change_existing (test_automation.POCConsoleTests.test_api_mode_idempotency_default_does_not_change_existing) ... INFO:procureai:POST /api/login 200 203ms
+INFO:httpx:HTTP Request: POST http://testserver/api/login "HTTP/1.1 200 OK"
+INFO:procureai:POST /api/cases/PR-fbbf84ed6bc24055/actions/mode 200 0ms
+INFO:httpx:HTTP Request: POST http://testserver/api/cases/PR-fbbf84ed6bc24055/actions/mode "HTTP/1.1 200 OK"
+INFO:procureai:POST /api/cases/PR-fbbf84ed6bc24055/actions/mode 200 0ms
+INFO:httpx:HTTP Request: POST http://testserver/api/cases/PR-fbbf84ed6bc24055/actions/mode "HTTP/1.1 200 OK"
+INFO:procureai:POST /api/preferences 200 0ms
+INFO:httpx:HTTP Request: POST http://testserver/api/preferences "HTTP/1.1 200 OK"
+ok
+test_assessment_is_immutable_and_source_snapshots_are_saved (test_automation.POCConsoleTests.test_assessment_is_immutable_and_source_snapshots_are_saved) ... ok
+test_changed_terms_invalidate_approvals (test_automation.POCConsoleTests.test_changed_terms_invalidate_approvals) ... ok
+test_complete_ai_cycle_with_mandatory_role_checkpoints (test_automation.POCConsoleTests.test_complete_ai_cycle_with_mandatory_role_checkpoints) ... ok
+test_extraction_requires_exact_supported_sources (test_automation.POCConsoleTests.test_extraction_requires_exact_supported_sources) ... ok
+test_gateway_acknowledgment_does_not_fabricate_payment (test_automation.POCConsoleTests.test_gateway_acknowledgment_does_not_fabricate_payment) ... ok
+test_gateway_settlement_matches_approved_invoice (test_automation.POCConsoleTests.test_gateway_settlement_matches_approved_invoice) ... ok
+test_human_role_and_separation_checks (test_automation.POCConsoleTests.test_human_role_and_separation_checks) ... ok
+test_image_requires_configured_ocr (test_automation.POCConsoleTests.test_image_requires_configured_ocr) ... ok
+test_invoice_exception_does_not_advance_to_finance (test_automation.POCConsoleTests.test_invoice_exception_does_not_advance_to_finance) ... ok
+test_missing_connection_is_visible_exception (test_automation.POCConsoleTests.test_missing_connection_is_visible_exception) ... ok
+test_mode_switch_fences_queued_work (test_automation.POCConsoleTests.test_mode_switch_fences_queued_work) ... ok
+test_multi_supplier_orders_and_receipt_boundaries (test_automation.POCConsoleTests.test_multi_supplier_orders_and_receipt_boundaries) ... INFO:procureai:POST /api/login 200 203ms
+INFO:httpx:HTTP Request: POST http://testserver/api/login "HTTP/1.1 200 OK"
+INFO:procureai:GET /api/dashboard 200 0ms
+INFO:httpx:HTTP Request: GET http://testserver/api/dashboard "HTTP/1.1 200 OK"
+INFO:procureai:GET /api/dashboard 200 0ms
+INFO:httpx:HTTP Request: GET http://testserver/api/dashboard?record_kind=test "HTTP/1.1 200 OK"
+ok
+test_no_duplicate_agent_submission (test_automation.POCConsoleTests.test_no_duplicate_agent_submission) ... ok
+test_override_resolves_constraints_and_requires_reason (test_automation.POCConsoleTests.test_override_resolves_constraints_and_requires_reason) ... ok
+test_partial_delivery_and_partial_invoice (test_automation.POCConsoleTests.test_partial_delivery_and_partial_invoice) ... ok
+test_pending_payment_blocks_duplicate_recording_and_unknown_requires_job (test_automation.POCConsoleTests.test_pending_payment_blocks_duplicate_recording_and_unknown_requires_job) ... INFO:procureai:POST /api/login 200 188ms
+INFO:httpx:HTTP Request: POST http://testserver/api/login "HTTP/1.1 200 OK"
+INFO:procureai:POST /api/cases/PR-a062bded7c3a43bf/actions/payment_record 409 0ms
+INFO:httpx:HTTP Request: POST http://testserver/api/cases/PR-a062bded7c3a43bf/actions/payment_record "HTTP/1.1 409 Conflict"
+INFO:procureai:POST /api/cases/PR-a062bded7c3a43bf/actions/payment_record 409 0ms
+INFO:httpx:HTTP Request: POST http://testserver/api/cases/PR-a062bded7c3a43bf/actions/payment_record "HTTP/1.1 409 Conflict"
+INFO:procureai:POST /api/cases/PR-a062bded7c3a43bf/actions/payment_record 200 16ms
+INFO:httpx:HTTP Request: POST http://testserver/api/cases/PR-a062bded7c3a43bf/actions/payment_record "HTTP/1.1 200 OK"
+ok
+test_poc_cannot_bypass_manual_operational_or_other_owner (test_automation.POCConsoleTests.test_poc_cannot_bypass_manual_operational_or_other_owner) ... INFO:procureai:POST /api/login 200 204ms
+INFO:httpx:HTTP Request: POST http://testserver/api/login "HTTP/1.1 200 OK"
+INFO:procureai:POST /api/cases/PR-ddcf1a1e60b14436/actions/supplier_decision 403 15ms
+INFO:httpx:HTTP Request: POST http://testserver/api/cases/PR-ddcf1a1e60b14436/actions/supplier_decision "HTTP/1.1 403 Forbidden"
+INFO:procureai:POST /api/cases/PR-ddcf1a1e60b14436/actions/supplier_decision 403 0ms
+INFO:httpx:HTTP Request: POST http://testserver/api/cases/PR-ddcf1a1e60b14436/actions/supplier_decision "HTTP/1.1 403 Forbidden"
+INFO:procureai:POST /api/cases/PR-ddcf1a1e60b14436/actions/supplier_decision 403 0ms
+INFO:httpx:HTTP Request: POST http://testserver/api/cases/PR-ddcf1a1e60b14436/actions/supplier_decision "HTTP/1.1 403 Forbidden"
+INFO:procureai:POST /api/cases/PR-ddcf1a1e60b14436/actions/supplier_decision 403 0ms
+INFO:httpx:HTTP Request: POST http://testserver/api/cases/PR-ddcf1a1e60b14436/actions/supplier_decision "HTTP/1.1 403 Forbidden"
+ok
+test_poc_gate_version_replay_and_permanent_test_classification (test_automation.POCConsoleTests.test_poc_gate_version_replay_and_permanent_test_classification) ... INFO:procureai:POST /api/login 200 188ms
+INFO:httpx:HTTP Request: POST http://testserver/api/login "HTTP/1.1 200 OK"
+INFO:procureai:POST /api/cases/PR-de53bc912db24a7a/actions/test_payment 409 0ms
+INFO:httpx:HTTP Request: POST http://testserver/api/cases/PR-de53bc912db24a7a/actions/test_payment "HTTP/1.1 409 Conflict"
+INFO:procureai:POST /api/cases/PR-de53bc912db24a7a/actions/supplier_decision 200 16ms
+INFO:httpx:HTTP Request: POST http://testserver/api/cases/PR-de53bc912db24a7a/actions/supplier_decision "HTTP/1.1 200 OK"
+INFO:procureai:POST /api/cases/PR-de53bc912db24a7a/actions/supplier_decision 200 16ms
+INFO:httpx:HTTP Request: POST http://testserver/api/cases/PR-de53bc912db24a7a/actions/supplier_decision "HTTP/1.1 200 OK"
+INFO:procureai:POST /api/cases/PR-de53bc912db24a7a/actions/supplier_decision 409 0ms
+INFO:httpx:HTTP Request: POST http://testserver/api/cases/PR-de53bc912db24a7a/actions/supplier_decision "HTTP/1.1 409 Conflict"
+INFO:procureai:POST /api/login 200 203ms
+INFO:httpx:HTTP Request: POST http://testserver/api/login "HTTP/1.1 200 OK"
+INFO:procureai:POST /api/cases/PR-de53bc912db24a7a/actions/classify_record 409 0ms
+INFO:httpx:HTTP Request: POST http://testserver/api/cases/PR-de53bc912db24a7a/actions/classify_record "HTTP/1.1 409 Conflict"
+ok
+test_recovery_of_expired_lease (test_automation.POCConsoleTests.test_recovery_of_expired_lease) ... ok
+test_signed_event_replay_and_cross_case_document (test_automation.POCConsoleTests.test_signed_event_replay_and_cross_case_document) ... ok
+test_signed_webhook_rejects_bad_signatures (test_automation.POCConsoleTests.test_signed_webhook_rejects_bad_signatures) ... INFO:procureai:POST /api/integration-events/warehouse 403 0ms
+INFO:httpx:HTTP Request: POST http://testserver/api/integration-events/warehouse "HTTP/1.1 403 Forbidden"
+ok
+test_single_login_full_cycle_and_attribution (test_automation.POCConsoleTests.test_single_login_full_cycle_and_attribution) ... INFO:procureai:POST /api/login 200 203ms
+INFO:httpx:HTTP Request: POST http://testserver/api/login "HTTP/1.1 200 OK"
+INFO:procureai:POST /api/cases/PR-414ad6c0808e44cc/actions/supplier_decision 200 15ms
+INFO:httpx:HTTP Request: POST http://testserver/api/cases/PR-414ad6c0808e44cc/actions/supplier_decision "HTTP/1.1 200 OK"
+INFO:procureai:POST /api/cases/PR-414ad6c0808e44cc/actions/po_decision 200 16ms
+INFO:httpx:HTTP Request: POST http://testserver/api/cases/PR-414ad6c0808e44cc/actions/po_decision "HTTP/1.1 200 OK"
+INFO:procureai:POST /api/cases/PR-414ad6c0808e44cc/actions/receipt 200 15ms
+INFO:httpx:HTTP Request: POST http://testserver/api/cases/PR-414ad6c0808e44cc/actions/receipt "HTTP/1.1 200 OK"
+INFO:procureai:POST /api/cases/PR-414ad6c0808e44cc/actions/quality 200 0ms
+INFO:httpx:HTTP Request: POST http://testserver/api/cases/PR-414ad6c0808e44cc/actions/quality "HTTP/1.1 200 OK"
+INFO:procureai:POST /api/cases/PR-414ad6c0808e44cc/actions/finance_decision 200 16ms
+INFO:httpx:HTTP Request: POST http://testserver/api/cases/PR-414ad6c0808e44cc/actions/finance_decision "HTTP/1.1 200 OK"
+INFO:procureai:POST /api/cases/PR-414ad6c0808e44cc/actions/test_payment 200 15ms
+INFO:httpx:HTTP Request: POST http://testserver/api/cases/PR-414ad6c0808e44cc/actions/test_payment "HTTP/1.1 200 OK"
+ok
+test_test_record_cannot_queue_live_external_actions (test_automation.POCConsoleTests.test_test_record_cannot_queue_live_external_actions) ... ok
+test_provider_accepts_only_calculated_source_grounded_assessment (test_automation.ProviderTests.test_provider_accepts_only_calculated_source_grounded_assessment) ... ok
+test_provider_rejects_unoffered_tools (test_automation.ProviderTests.test_provider_rejects_unoffered_tools) ... ok
+
+----------------------------------------------------------------------
+Ran 55 tests in 15.190s
+
+OK

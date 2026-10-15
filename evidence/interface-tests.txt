@@ -1,0 +1,21 @@
+✔ Light and Dark apply immediately and persist locally (2.2076ms)
+✔ System follows operating system changes (0.7052ms)
+✔ Explicit preference is not overwritten by OS changes (0.5857ms)
+✔ Preloaded preference prevents wrong-theme initialization (0.6463ms)
+✔ Semantic tokens cover both themes (0.5024ms)
+✔ Theme still works when browser storage is unavailable (0.689ms)
+✔ Dashboard renders all routes and truthful empty analytics (126.8167ms)
+✔ Theme changes persist via CSRF-protected API without mutating business state (39.1079ms)
+✔ Case offers buyer quotation actions and evidence explanation panel (45.6636ms)
+✔ Viewer cannot see write controls (23.6212ms)
+✔ Stored untrusted text is escaped instead of executing markup (20.1073ms)
+✔ Settings clearly distinguish disconnected external services (18.2008ms)
+✔ Global search navigates to the matching persisted workflow (20.1951ms)
+ℹ tests 13
+ℹ suites 0
+ℹ pass 13
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 1164.8266

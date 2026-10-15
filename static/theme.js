@@ -1,0 +1,1 @@
+(()=>{let t='system';try{t=localStorage.getItem('procure-theme')||'system'}catch{}const m=matchMedia('(prefers-color-scheme: dark)');function apply(){document.documentElement.dataset.theme=t==='system'?(m.matches?'dark':'light'):t}window.setTheme=t2=>{t=t2;try{localStorage.setItem('procure-theme',t)}catch{}apply()};m.addEventListener('change',apply);apply()})();

@@ -1,0 +1,6 @@
+{$PROCURE_DOMAIN} {
+    request_body {
+        max_size 11MB
+    }
+    reverse_proxy app:8000
+}

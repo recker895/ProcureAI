@@ -1,0 +1,25 @@
+✔ Light and Dark apply immediately and persist locally (2.0568ms)
+✔ System follows operating system changes (0.612ms)
+✔ Explicit preference is not overwritten by OS changes (0.544ms)
+✔ Preloaded preference prevents wrong-theme initialization (0.5631ms)
+✔ Semantic tokens cover both themes (0.4964ms)
+✔ Theme still works when browser storage is unavailable (0.6457ms)
+✔ Dashboard renders all routes and truthful empty analytics (131.4663ms)
+✔ Theme changes persist via CSRF-protected API without mutating business state (33.4477ms)
+✔ Case offers buyer quotation actions and evidence explanation panel (40.0569ms)
+✔ Viewer cannot see write controls (23.9668ms)
+✔ Stored untrusted text is escaped instead of executing markup (31.3754ms)
+✔ Settings clearly distinguish disconnected external services (19.1348ms)
+✔ Global search navigates to the matching persisted workflow (30.2214ms)
+✔ Default AI switch opens three queues without modifying existing cases (30.5446ms)
+✔ Case AI switch proposes an audited transition with a required reason (21.2726ms)
+✔ Agent workspace displays thirteen on-demand roles and factual empty queues (20.0248ms)
+✔ Uploaded document status appears before document flow and distinguishes stored from applied quotations (22.0579ms)
+ℹ tests 17
+ℹ suites 0
+ℹ pass 17
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 1217.2806
